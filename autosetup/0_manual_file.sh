@@ -10,6 +10,7 @@ sudo ./basic_tools.sh
 mkdir ~/.ssh
 # copy private key then
 xclip -o | tee ~/.ssh/id_rsa
+chmod 400 ~/.ssh/id_rsa
 # copy public key then
 xclip -o | tee ~/.ssh/id_rsa.pub
 
@@ -21,7 +22,7 @@ ssh-add ~/.ssh/id_rsa
 ssh -T git@github.com
 
 # install python basics
-sudo apt instal ipython python-dev python3-dev pip
+sudo apt install ipython python-dev python3-dev python-pip
 pip install --upgrade pip
 sudo -H pip install virtualenv
 sudo -H pip install virtualenvwrapper
